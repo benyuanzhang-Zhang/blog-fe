@@ -1,5 +1,9 @@
+// const StylelintWebpackPlugin = require('stylelint-webpack-plugin')
+import StylelintWebpackPlugin from 'stylelint-webpack-plugin'
+
 export default {
-  publicPath: './dist',
+  publicPath: './',
+  outputDir: 'vue',
   devServer: {
     proxy: {
       '/api': {
@@ -8,5 +12,26 @@ export default {
         changeOrigin: true
       }
     }
+  },
+  configureWebpack: {
+    plugins: [
+      new StylelintWebpackPlugin({
+        files: ['**/*.{ html, vue, css, less}'],
+        fix: true,
+        cache: true,
+        emitError: true,
+        failOnError: false
+      })
+    ]
+  },
+  css: {
+    loaderOptions: [{
+      test: /\.less$/,
+      use: [{
+        loader: 'less-loader'
+      }, {
+        loader: 'css-loader'
+      }]
+    }]
   }
 }

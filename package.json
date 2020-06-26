@@ -8,9 +8,13 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.157",
     "@types/mongoose": "^5.7.27",
+    "axios": "^0.19.2",
     "core-js": "^3.6.5",
+    "dayjs": "^1.8.28",
     "element-ui": "^2.13.2",
+    "flex.css": "^1.1.7",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.2",
@@ -18,6 +22,7 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/stylelint": "^9.10.1",
     "@types/stylelint-webpack-plugin": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",

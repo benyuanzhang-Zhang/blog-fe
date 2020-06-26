@@ -1,8 +1,7 @@
-// const StylelintWebpackPlugin = require('stylelint-webpack-plugin')
 import StylelintWebpackPlugin from 'stylelint-webpack-plugin'
 
 export default {
-  publicPath: './',
+  publicPath: './vue',
   outputDir: 'vue',
   devServer: {
     proxy: {

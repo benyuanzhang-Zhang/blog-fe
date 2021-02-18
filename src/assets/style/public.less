@@ -3,17 +3,56 @@
 @size: 0, 5, 10, 15, 20;
 @indexForQuick: 3;
 
-html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,nav,article,iframe,button {margin:0;padding:0;}
-table {border-collapse:collapse;border-spacing:0;}
-img {border:0}
-html,body {
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+nav,
+article,
+iframe,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img { border: 0; }
+
+html,
+body {
   width: 100%;
   height: 100%;
 }
+
 a {
   text-decoration: none;
 }
-ul,li {
+
+ul,
+li {
   list-style-type: none;
 }
 
@@ -23,39 +62,41 @@ ul,li {
   &fr { float: right !important; }
   // set margin and padding use @size
   each(@size, {
-    // margin distance
+  // margin distance
     &m {
-      &-@{value} { margin: unit(@value, px); }
-      &t-@{value} { margin-top: unit(@value, px); }
-      &r-@{value} { margin-right: unit(@value, px); }
-      &b-@{value} { margin-bottom: unit(@value, px); }
-      &l-@{value} { margin-left: unit(@value, px); }
-    }
-    // padding distance
+    &-@{value} { margin: unit(@value, px); }
+    &t-@{value} { margin-top: unit(@value, px); }
+    &r-@{value} { margin-right: unit(@value, px); }
+    &b-@{value} { margin-bottom: unit(@value, px); }
+    &l-@{value} { margin-left: unit(@value, px); }
+  }
+  // padding distance
     &p {
-      &-@{value} { padding: unit(@value, px); }
-      &t-@{value} { padding-top: unit(@value, px); }
-      &r-@{value} { padding-right: unit(@value, px); }
-      &b-@{value} { padding-bottom: unit(@value, px); }
-      &l-@{value} { padding-left: unit(@value, px); }
-    }
-  })
+    &-@{value} { padding: unit(@value, px); }
+    &t-@{value} { padding-top: unit(@value, px); }
+    &r-@{value} { padding-right: unit(@value, px); }
+    &b-@{value} { padding-bottom: unit(@value, px); }
+    &l-@{value} { padding-left: unit(@value, px); }
+  }
+})
   // quick use margin and padding
   // extract(variable, index) // index is 1 to variable length
   &m {
-    & { margin: unit(extract(@size, @indexForQuick), px); }
+    margin: unit(extract(@size, @indexForQuick), px);
     &t { margin-top: unit(extract(@size, @indexForQuick), px); }
     &r { margin-right: unit(extract(@size, @indexForQuick), px); }
     &b { margin-bottom: unit(extract(@size, @indexForQuick), px); }
     &l { margin-left: unit(extract(@size, @indexForQuick), px); }
   }
+
   &p {
-    & { margin: unit(extract(@size, @indexForQuick), px); }
+    margin: unit(extract(@size, @indexForQuick), px);
     &t { margin-top: unit(extract(@size, @indexForQuick), px); }
     &r { margin-right: unit(extract(@size, @indexForQuick), px); }
     &b { margin-bottom: unit(extract(@size, @indexForQuick), px); }
     &l { margin-left: unit(extract(@size, @indexForQuick), px); }
   }
+
   &text-center {
     text-align: center;
   }
@@ -89,29 +130,36 @@ ul,li {
     &column,
     &row {
       display: flex;
+
       &.center {
         align-items: center;
         justify-content: center;
       }
+
       &.space-between {
         align-items: center;
         justify-content: space-between;
       }
+
       &--inline {
         display: inline-flex;
+
         &.center {
           align-items: center;
           justify-content: center;
         }
+
         &.space-between {
           align-items: center;
           justify-content: space-between;
         }
       }
     }
+
     &row {
       flex-direction: row;
     }
+
     &column {
       flex-direction: column;
     }
@@ -126,6 +174,7 @@ ul,li {
     .el-dialog {
       position: relative;
       height: 90%;
+
       .el-dialog__body {
         position: absolute;
         padding: 5px 20px;
@@ -135,6 +184,7 @@ ul,li {
         bottom: 62px;
         overflow-y: auto;
       }
+
       .el-dialog__footer {
         display: block;
         width: 100%;
@@ -149,20 +199,24 @@ ul,li {
 .@{prefix}-icon {
   font-size: 20px;
   font-weight: bold;
+
   &.success,
-  & success {
-    color: #67C23A;
+  & .success {
+    color: #67c23a;
   }
+
   &.warning,
-  & warning {
-    color: #E6A23C;
+  & .warning {
+    color: #e6a23c;
   }
+
   &.danger,
-  & danger {
-    color: #F56C6C;
+  & .danger {
+    color: #f56c6c;
   }
+
   &.primary,
-  & primary {
-    color: #409EFF;
+  & .primary {
+    color: #409eff;
   }
 }

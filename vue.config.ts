@@ -24,13 +24,14 @@ export default {
     ]
   },
   css: {
-    loaderOptions: [{
-      test: /\.less$/,
-      use: [{
-        loader: 'less-loader'
-      }, {
-        loader: 'css-loader'
-      }]
-    }]
+    loaderOptions: [
+      {
+        test: /\.less$/,
+        use: [
+          { loader: 'less-loader' },
+          { loader: 'css-loader' }
+        ]
+      }
+    ]
   }
 }

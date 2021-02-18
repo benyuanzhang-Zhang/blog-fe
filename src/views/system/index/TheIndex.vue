@@ -1,5 +1,5 @@
 <template>
-  <div class="classname">
+  <div class="lk-container lk-flex lk-justify-center">
     index
   </div>
 </template>
@@ -12,7 +12,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less" scoped>
-
-</style>

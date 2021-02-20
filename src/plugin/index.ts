@@ -12,7 +12,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'tailwindcss/tailwind.css'
 
 export default {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // eslint-disable-next-line
   // @ts-ignore
   async install (Vue) {
     Vue.config.tooltips = false

@@ -4,20 +4,18 @@
       <div class="logo">ben&nbsp;&nbsp;yuan&nbsp;zhang</div>
 
       <el-menu :default-active="menu.active" mode="horizontal">
-        <el-menu-item index="1">处理中心</el-menu-item>
-        <el-submenu index="2">
-          <template slot="title">我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-        </el-submenu>
+        <el-menu-item
+          v-for="item in menu.list"
+          :key="item.index"
+          :index="item.index"
+        >{{ item.name }}</el-menu-item>
       </el-menu>
     </el-header>
-    <el-main>
-      <transition>
-        <router-view />
-      </transition>
-    </el-main>
+    <transition>
+      <el-main>
+          <router-view />
+      </el-main>
+    </transition>
   </el-container>
 </template>
 
@@ -29,7 +27,8 @@ export default {
       menu: {
         active: '1',
         list: [
-          { }
+          { index: '1', name: '推荐' },
+          { index: '2', name: '归档' }
         ]
       }
     }

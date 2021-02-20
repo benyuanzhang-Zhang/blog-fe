@@ -895,7 +895,6 @@ module.exports = {
   */
 
   plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     require('tailwindcss/plugins/container')({
       // center: true,
       // padding: '1rem',

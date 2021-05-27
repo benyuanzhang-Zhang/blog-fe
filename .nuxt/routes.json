@@ -1,0 +1,16 @@
+[
+  {
+    "name": "article-Index",
+    "path": "/article/Index",
+    "component": "/Users/zhangmingxin/WebstormProjects/blog-fe/pages/article/Index.vue",
+    "chunkName": "pages/article/Index",
+    "_name": "_3968a258"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/zhangmingxin/WebstormProjects/blog-fe/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_42924bcd"
+  }
+]

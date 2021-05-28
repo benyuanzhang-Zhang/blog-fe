@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.#{$prefix}- {
+  &flex {
+    display: flex;
+    &-column {
+      flex-direction: column;
+    }
+    &-center {
+      align-items: center;
+      justify-content: center
+    }
+    &-space-between {
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  // 循环
+  @each $d in $direction {
+    @each $item in $size {
+      &#{$d}-#{$item} {
+        margin: $item + px
+      }
+    }
+  }
+
+  // 颜色
+  @each $type, $color in $colorType {
+    @each $attribute in ($colorAttribute) {
+      &#{$attribute}-#{$type} {
+        color: $color;
+      }
+    }
+  }
+
+  // 单行超出隐藏
+  &ellipsis {
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  &multi-ellipsis {
+    $lineClamp: 2;
+
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lineClamp;
+  }
+
+  &pointer {
+    user-select: none;
+    cursor: pointer;
+  }
+}

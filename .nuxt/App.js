@@ -8,6 +8,8 @@ import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '../node_modules/element-ui/lib/theme-chalk/index.css'
 
+import '../assets/styles/public.scss'
+
 import '../node_modules/prismjs/themes/prism.css'
 
 import _6f6c098b from '../layouts/default.vue'

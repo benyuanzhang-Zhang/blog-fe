@@ -1,0 +1,17 @@
+// prefix
+$prefix: yz;
+
+// color
+$primary: #409EFF;
+$success: #67C23A;
+$warning: #E6A23C;
+$danger: #F56C6C;
+$info: #909399;
+$none: #fff;
+
+$colorAttribute: color, bgc;
+$colorType: (primary: $primary, success: $success, warning: $warning, danger: $danger, info: $info, none: $none);
+
+// loop
+$size: 5, 10, 15;
+$direction: m, mt, mr, mb, ml, p, pt, pr, pb, pl;

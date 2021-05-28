@@ -15,7 +15,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: [
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/styles/public.scss'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/element-ui'],
@@ -29,7 +32,12 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/style-resources'
   ],
+  // 全局scss变量
+  styleResources: {
+    scss: ['~assets/styles/_variable.scss']
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

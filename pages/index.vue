@@ -5,10 +5,10 @@
 </template>
 
 <script lang="ts">
-import { Context } from "@nuxt/types";
+import { Context } from '@nuxt/types'
 
 export default {
-  async asyncData({ $axios, error }: Context) {
+  async asyncData ({ $axios, error }: Context) {
     try {
       const { data } = await $axios.post('http://dz.hngqyun.cn/api/rtdb/st_rsvr_r/dp/rsvr_list')
       return {

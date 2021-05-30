@@ -5,17 +5,17 @@
         <el-input v-model="user.login_name" placeholder="用户名" />
       </el-form-item>
       <el-form-item label="密码">
-        <el-input v-model="user.login_password" placeholder="密码" />
+        <el-input v-model="user.login_password" type="password" placeholder="密码" />
       </el-form-item>
-      <el-button type="primary" @click="login">
-        登录
+      <el-button type="primary" @click="signup">
+        注册
       </el-button>
     </el-form>
   </div>
 </template>
 
 <script>
-import { login } from '~/services/UsersService'
+import { signup } from '~/services/UsersService'
 export default {
   name: 'Index',
   data() {
@@ -27,8 +27,8 @@ export default {
     }
   },
   methods: {
-    async login() {
-      const a = await login(this.user)
+    async signup() {
+      const a = await signup(this.user)
       console.log(a)
     }
   }

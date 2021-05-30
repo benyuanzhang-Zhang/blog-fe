@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ],
+  "rules": {
+    "no-console": "off",
+    "semi": [2, "never"],
+    "quotes": [2, "single"],
+    "space-before-function-paren": [1, "never"]
+  }
+}
